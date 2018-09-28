@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  zookeeper:
+    build: ./docker/zookeeper
+    volumes:
+      - ./docker/zookeeper/conf:/usr/local/zookeeper/conf
+    ports:
+      - "2181:2181"
+      - "2888:2888"
+      - "3888:3888"
